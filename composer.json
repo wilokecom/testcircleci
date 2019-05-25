@@ -1,0 +1,11 @@
+  GNU nano 2.0.6             File: composer.json                                
+
+{
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
+    }
+}
+
+
+
+
