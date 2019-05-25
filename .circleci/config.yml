@@ -2,13 +2,13 @@
 #
 # Check https://circleci.com/docs/2.0/language-php/ for more details
 #
-version: 3
+version: 2
 jobs:
   build:
     working_directory: ~/test
     docker:
       # Specify the version you desire here
-      - image: circleci/php:7.2-node-browsers-legacy
+      - image: circleci/php:7.2-node-browsers
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
