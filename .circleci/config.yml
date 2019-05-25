@@ -5,6 +5,7 @@
 version: 2
 jobs:
   build:
+    working_directory ~/test
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.1-node-browsers
@@ -16,13 +17,9 @@ jobs:
       # for database intensive operations.
       # - image: circleci/mysql:5.7-ram
       #
-      # - image: redis:2.8.19
-
-    working_directory: ~/test
-	
+      # - image: redis:2.8.19	
     steps:
       - checkout
-
       - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
       - run: sudo docker-php-ext-install zip
 
