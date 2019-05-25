@@ -38,7 +38,7 @@ jobs:
             php -v
             php composer.phar --version
       - run: sudo chmod -R 777 /home/circleci/test-repo/
-      - run: sudo touch /home/circleci/test-repo/composer.json
+      - run: echo { "autoload": { "psr-4": {"Acme\\": "src/"} } } > composer.json
       - run: php composer.phar install
 
       - save_cache:
